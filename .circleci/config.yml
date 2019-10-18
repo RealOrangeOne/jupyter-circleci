@@ -13,3 +13,7 @@ jobs:
                 key: cache-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
                 paths:
                     - "/home/circleci/.local/share/virtualenvs"
+            - run: pipenv run build --to html --log-level DEBUG
+            - store_artifacts:
+                path: Notebook.html
+                destination: Notebook.html

@@ -6,6 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+jupyterlab = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+start = "jupyter lab"
+build = "jupyter nbconvert Notebook.ipynb --execute"
